@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  function winclose() {
+    var gui = require('nw.gui');
+    var win = gui.Window.get();
+    win.close();
+  }
   var text = document.getElementById("text");
   while (text.firstChild) text.removeChild(text.firstChild);
   document.getElementById("text").innerHTML += locations.start.desc;
@@ -17,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("text").innerHTML += locations.start.desc;
           break;
         case "close":
-          window.close();
+          winclose();
           break;
       }
       document.getElementById("usr-input").value = "";
