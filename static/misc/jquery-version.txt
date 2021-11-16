@@ -1,17 +1,3 @@
-/**
- * This variable stores all locations that the developer has made 
- * with objects that has descriptions.
- * Descriptions change the text shown in the textbox.
- */
-var locations = {
-  start: {
-    desc: "I welcome you, oh, my child. Where do you wish to go?<br><br><b>(North) (South)</b>",
-  },
-  north1: {
-    desc: "Bravery for thy who choseth <b>North</b> as you shall conquer the unseen.",
-  },
-};
-
 $(document).ready(function () {
   $("#text").empty().append(locations.start.desc);
   $(document).keypress(function (key) {
