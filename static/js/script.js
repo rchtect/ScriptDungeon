@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("text").innerHTML += locations.start.desc;
           break;
         case "close":
-          Window.close();
+          window.close();
           break;
       }
       document.getElementById("usr-input").value = "";
