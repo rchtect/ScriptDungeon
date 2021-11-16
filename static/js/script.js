@@ -1,3 +1,9 @@
+function backHome() {
+  var text = document.getElementById("text");
+  while (text.firstChild) text.removeChild(text.firstChild);
+  document.getElementById("text").innerHTML += locations.start.desc;
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   var text = document.getElementById("text");
   while (text.firstChild) text.removeChild(text.firstChild);
