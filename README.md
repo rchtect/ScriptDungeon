@@ -8,6 +8,5 @@ Länk till sidan: https://rchtect.github.io/ScriptDungeon/
 
 ## Todos
 
-()Add more content
-/
-()Add options validation to make sure you cant skip in storyline
+()Add more content  
+()Add options validation to make sure you cant skip in storyline  
