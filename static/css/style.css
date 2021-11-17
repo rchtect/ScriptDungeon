@@ -142,3 +142,7 @@ b {
 #hrt:hover {
   color: red;
 }
+
+#creds {
+  font-size: 12px;
+}
