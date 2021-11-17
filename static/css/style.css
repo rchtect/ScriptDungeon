@@ -58,7 +58,6 @@ input {
   outline: solid 1px yellow;
   max-width: 600px;
   width: 100%;
-  min-width: 300px;
 }
 
 a {
@@ -111,7 +110,6 @@ b {
   align-items: center;
   max-width: 600px;
   width: 100%;
-  min-width: 300px;
   padding: 20px 0px 40px 0px;
   border: solid 1px yellow;
   margin-top: 20px;
@@ -173,7 +171,7 @@ b {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 720px) {
   input {
     margin-top: 20px;
   }
