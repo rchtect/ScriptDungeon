@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 if (
   document.getElementById("audio").duration > 0 &&
-  !document.getElementById("myAudioID").paused
+  !document.getElementById("audio").paused
 ) {
   document.getElementById("mute-txt").innerHTML = "Mute";
   document.getElementById("death-mute-txt").innerHTML = "Mute";
@@ -78,7 +78,7 @@ if (
 
 if (
   document.getElementById("death-audio").duration > 0 &&
-  !document.getElementById("myAudioID").paused
+  !document.getElementById("death-audio").paused
 ) {
   document.getElementById("mute-txt").innerHTML = "Mute";
   document.getElementById("death-mute-txt").innerHTML = "Mute";
