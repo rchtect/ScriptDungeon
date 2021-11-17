@@ -36,7 +36,7 @@ function isAlive() {
   }
 }
 
-function isAlive() {
+function playMusic() {
   if (alive == true) {
     document.getElementById("audio").play();
   } else {
