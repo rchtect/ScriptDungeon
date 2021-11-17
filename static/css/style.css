@@ -4,11 +4,26 @@
 }
 
 @keyframes deathAni {
-  0%   {color:black; opacity: 100%;}
-  25%  {color:red; opacity: 50%;}
-  50%  {color:black; opacity: 100%;}
-  75%  {color:red; opacity: 50%;}
-  100% {color:black; opacity: 100%;}
+  0% {
+    color: black;
+    opacity: 100%;
+  }
+  25% {
+    color: red;
+    opacity: 50%;
+  }
+  50% {
+    color: black;
+    opacity: 100%;
+  }
+  75% {
+    color: red;
+    opacity: 50%;
+  }
+  100% {
+    color: black;
+    opacity: 100%;
+  }
 }
 
 :root {
@@ -51,7 +66,7 @@ input {
 
 a {
   font-size: 28px;
-  color: green;
+  color: yellow;
   text-decoration: none;
   margin: 20px;
 }
@@ -133,7 +148,6 @@ b {
   color: red;
 }
 
-
 #bottom {
   margin-top: 40px;
   text-align: center;
@@ -145,4 +159,8 @@ b {
 
 #creds {
   font-size: 12px;
+}
+
+.play {
+  color: green;
 }
