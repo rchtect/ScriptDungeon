@@ -22,18 +22,17 @@ function isInvalid() {
 
 function isAlive() {
   if (alive == true) {
-    document.getElementById("audio").play();
     document.getElementById("death-mute-txt").style.display = "none";
     document.getElementById("mute-txt").style.display = "block";
-    document.getElementById("audio").muted = false;
-    document.getElementById("death-audio").muted = true;
+    document.getElementById("audio").play();
+    document.getElementById("death-audio").pause();
     document.getElementById("text").innerHTML += livingState.alive.desc;
   } else {
     document.getElementById("death-audio").play();
     document.getElementById("death-mute-txt").style.display = "block";
     document.getElementById("mute-txt").style.display = "none";
-    document.getElementById("audio").muted = true;
-    document.getElementById("death-audio").muted = false;
+    document.getElementById("audio").pause();
+    document.getElementById("death-audio").play();
     document.getElementById("text").innerHTML += livingState.dead.desc;
   }
 }
@@ -62,12 +61,12 @@ function updateLocation() {
 var i = 0;
 function mute() {
   if (i == 0) {
-    document.getElementById("death-audio").muted = true;
-    document.getElementById("audio").muted = true;
+    document.getElementById("death-audio").pause();
+    document.getElementById("audio").pause();
     document.getElementById("mute-txt").innerHTML = "Unmute";
     i += 1;
   } else {
-    document.getElementById("audio").muted = false;
+    document.getElementById("audio").play();
     document.getElementById("mute-txt").innerHTML = "Mute";
     i -= 1;
   }
@@ -76,13 +75,21 @@ function mute() {
 var i2 = 0;
 function muteDeath() {
   if (i2 == 0) {
-    document.getElementById("death-audio").muted = true;
-    document.getElementById("audio").muted = true;
+    document.getElementById("death-audio").pause();
+    document.getElementById("audio").pause();
     document.getElementById("death-mute-txt").innerHTML = "Unmute";
     i2 += 1;
   } else {
-    document.getElementById("death-audio").muted = false;
+    document.getElementById("death-audio").play();
     document.getElementById("death-mute-txt").innerHTML = "Mute";
     i2 -= 1;
   }
+}
+
+if (document.getElementById('myAudioID').duration > 0 && !document.getElementById('myAudioID').paused) {
+  document.getElementById("mute-txt").innerHTML = "Mute";
+  document.getElementById("death-mute-txt").innerHTML = "Mute";
+} else {
+  document.getElementById("mute-txt").innerHTML = "Unmute";
+  document.getElementById("death-mute-txt").innerHTML = "Unmute";
 }
