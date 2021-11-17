@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="./static/css/style.css" />
   </head>
   <body>
-    <audio autoplay loop id="audio">
+    <audio loop id="audio">
       <source src="./static/music/main.mp3" type="audio/ogg">
     </audio>
-    <audio autoplay loop id="death-audio">
+    <audio loop id="death-audio">
       <source src="./static/music/death.mp3" type="audio/ogg">
     </audio>
     <div class="container">
@@ -26,12 +26,14 @@
         type="text"
         placeholder="Enter your command here..."
       />
-      <a onClick="mute();" id="mute-txt">Mute</a>
-      <a onClick="muteDeath();" id="death-mute-txt">Mute</a>
-      <a onClick="playMusic();" id="play-txt" class="play">Play</a>
+      <div>
+        <a onClick="mute();" id="mute-txt">Unmute</a>
+        <a onClick="muteDeath();" id="death-mute-txt">Unmute</a>
+        <a onClick="playMusic();" id="play-txt" class="play">Play sound</a>
+      </div>
     </div>
+    <script type="text/javascript" src="./static/js/functions.js"></script>
     <script type="text/javascript" src="./static/js/data.js"></script>
     <script type="text/javascript" src="./static/js/script.js"></script>
-    <script type="text/javascript" src="./static/js/functions.js"></script>
   </body>
 </html>

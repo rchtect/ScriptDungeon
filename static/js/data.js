@@ -18,9 +18,9 @@ var locations = {
 
 var livingState = {
   alive: {
-    desc: "<b class='alive'>♥ You are alive ♥</b> <br><br>"
+    desc: "<b class='red'>♥ You are alive ♥</b> <br><br>"
   },
   dead: {
-    desc: "<b class='reddead'>♥ You died :( ♥</b> <br><br>"
+    desc: "<b class='red'>♥ You died :( ♥</b> <br><br>"
   }
 }

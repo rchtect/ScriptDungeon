@@ -1,9 +1,10 @@
 var currentLocation = 0;
-var alive = new Boolean(true);
+var alive = true;
 var optionLocation = "start";
 var input = "";
+var muted = true;
 document.addEventListener("DOMContentLoaded", function () {
-  alive = new Boolean(true);
+  alive = true;
   clearText();
   isAlive();
   document.getElementById("text").innerHTML += locations.start.desc;
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case "squish":
           if (currentLocation == 1) {
-            alive = new Boolean(false);
+            death();
             clearText();
             isAlive();
             updateLocation();

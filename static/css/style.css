@@ -137,15 +137,11 @@ b {
   transition: var(--ani-time);
 }
 
-.reddead {
+.red {
   color: red;
   animation-name: deathAni;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-}
-
-.alive {
-  color: red;
 }
 
 #bottom {
