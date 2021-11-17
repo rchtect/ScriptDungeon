@@ -10,10 +10,13 @@
   75%  {color:red; opacity: 50%;}
   100% {color:black; opacity: 100%;}
 }
+
 :root {
   --ani-time: 0.6s;
 }
-
+::selection {
+  background-color: black;
+}
 * {
   margin: none;
   padding: none;
@@ -47,11 +50,15 @@ input {
 }
 
 a {
+  font-size: 28px;
+  color: green;
   text-decoration: none;
+  margin: 20px;
 }
 
 a:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 
 b {

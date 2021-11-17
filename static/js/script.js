@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
         case "close":
           window.close();
           break;
+        default:
+          isInvalid();
       } 
       document.getElementById("usr-input").value = "";
     } else if (keyCode == 27) {

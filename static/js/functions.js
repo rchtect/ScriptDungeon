@@ -21,21 +21,58 @@ function isInvalid() {
 }
 
 function isAlive() {
-    if (alive == true) {
-        document.getElementById("text").innerHTML += livingState.alive.desc;
-      } else {
-        document.getElementById("text").innerHTML += livingState.dead.desc;
-      }
+  if (alive == true) {
+    document.getElementById("death-mute-txt").style.display = "none";
+    document.getElementById("mute-txt").style.display = "block";
+    document.getElementById("audio").muted = false;
+    document.getElementById("death-audio").muted = true;
+    document.getElementById("text").innerHTML += livingState.alive.desc;
+  } else {
+    document.getElementById("death-mute-txt").style.display = "block";
+    document.getElementById("mute-txt").style.display = "none";
+    document.getElementById("audio").muted = true;
+    document.getElementById("death-audio").muted = false;
+    document.getElementById("text").innerHTML += livingState.dead.desc;
+  }
 }
 
 function death() {
-    alive = new Boolean(false);
+  alive = new Boolean(false);
 }
 
 function changeOptions() {
-    document.getElementById("text").innerHTML += locations[optionLocation].options
+  document.getElementById("text").innerHTML +=
+    locations[optionLocation].options;
 }
 
 function updateLocation() {
-    document.getElementById("text").innerHTML += locations[input].desc
+  document.getElementById("text").innerHTML += locations[input].desc;
+}
+
+var i = 0;
+function mute() {
+  if (i == 0) {
+    document.getElementById("death-audio").muted = true;
+    document.getElementById("audio").muted = true;
+    document.getElementById("mute-txt").innerHTML = "Unmute";
+    i += 1;
+  } else {
+    document.getElementById("audio").muted = false;
+    document.getElementById("mute-txt").innerHTML = "Mute";
+    i -= 1;
+  }
+}
+
+var i2 = 0;
+function muteDeath() {
+  if (i2 == 0) {
+    document.getElementById("death-audio").muted = true;
+    document.getElementById("audio").muted = true;
+    document.getElementById("death-mute-txt").innerHTML = "Unmute";
+    i2 += 1;
+  } else {
+    document.getElementById("death-audio").muted = false;
+    document.getElementById("death-mute-txt").innerHTML = "Mute";
+    i2 -= 1;
+  }
 }
