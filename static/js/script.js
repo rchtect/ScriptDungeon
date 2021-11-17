@@ -1,7 +1,7 @@
 var currentLocation = 0;
 var alive = new Boolean(true);
 var optionLocation = "start";
-var input ="";
+var input = "";
 document.addEventListener("DOMContentLoaded", function () {
   alive = new Boolean(true);
   clearText();
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var keyCode = e.keyCode;
     if (keyCode == 13) {
       input = document.getElementById("usr-input").value.toLowerCase();
-      optionLocation = input
+      optionLocation = input;
       switch (input) {
         case "north":
           if (currentLocation == 0) {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             isAlive();
             updateLocation();
             changeOptions();
-            currentLocation += 1
+            currentLocation += 1;
           } else {
             isInvalid();
           }
@@ -32,23 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
             isAlive();
             updateLocation();
             changeOptions();
-            currentLocation += 2
+            currentLocation += 2;
           } else {
             isInvalid();
           }
           break;
-          case "squish":
-            if (currentLocation == 1) {
-              alive = new Boolean(false);
-              clearText();
-              isAlive();
-              updateLocation();
-              changeOptions();
-              currentLocation += 2
-            } else {
-              isInvalid();
-            }
-            break;
+        case "squish":
+          if (currentLocation == 1) {
+            alive = new Boolean(false);
+            clearText();
+            isAlive();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
         case "reset":
           backHome();
           break;
@@ -57,10 +57,32 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         default:
           isInvalid();
-      } 
+      }
       document.getElementById("usr-input").value = "";
     } else if (keyCode == 27) {
       backHome();
-    };
+    }
   }
 });
+
+if (
+  document.getElementById("audio").duration > 0 &&
+  !document.getElementById("myAudioID").paused
+) {
+  document.getElementById("mute-txt").innerHTML = "Mute";
+  document.getElementById("death-mute-txt").innerHTML = "Mute";
+} else {
+  document.getElementById("mute-txt").innerHTML = "Unmute";
+  document.getElementById("death-mute-txt").innerHTML = "Unmute";
+}
+
+if (
+  document.getElementById("death-audio").duration > 0 &&
+  !document.getElementById("myAudioID").paused
+) {
+  document.getElementById("mute-txt").innerHTML = "Mute";
+  document.getElementById("death-mute-txt").innerHTML = "Mute";
+} else {
+  document.getElementById("mute-txt").innerHTML = "Unmute";
+  document.getElementById("death-mute-txt").innerHTML = "Unmute";
+}

@@ -85,11 +85,3 @@ function muteDeath() {
     i2 -= 1;
   }
 }
-
-if (document.getElementById('myAudioID').duration > 0 && !document.getElementById('myAudioID').paused) {
-  document.getElementById("mute-txt").innerHTML = "Mute";
-  document.getElementById("death-mute-txt").innerHTML = "Mute";
-} else {
-  document.getElementById("mute-txt").innerHTML = "Unmute";
-  document.getElementById("death-mute-txt").innerHTML = "Unmute";
-}
