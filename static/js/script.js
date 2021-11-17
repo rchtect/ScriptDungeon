@@ -64,25 +64,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-
-if (
-  document.getElementById("audio").duration > 0 &&
-  !document.getElementById("audio").paused
-) {
-  document.getElementById("mute-txt").innerHTML = "Mute";
-  document.getElementById("death-mute-txt").innerHTML = "Mute";
-} else {
-  document.getElementById("mute-txt").innerHTML = "Unmute";
-  document.getElementById("death-mute-txt").innerHTML = "Unmute";
-}
-
-if (
-  document.getElementById("death-audio").duration > 0 &&
-  !document.getElementById("death-audio").paused
-) {
-  document.getElementById("mute-txt").innerHTML = "Mute";
-  document.getElementById("death-mute-txt").innerHTML = "Mute";
-} else {
-  document.getElementById("mute-txt").innerHTML = "Unmute";
-  document.getElementById("death-mute-txt").innerHTML = "Unmute";
-}
