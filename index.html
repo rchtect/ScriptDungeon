@@ -16,20 +16,22 @@
     <audio loop id="death-audio">
       <source src="./static/music/death.mp3" type="audio/ogg">
     </audio>
-    <div class="container">
-      <a class="title" onClick="backHome();">ScriptDungeon</a>
-      <div class="content">
-        <p id="text"></p>
-      </div>
-      <input
-        id="usr-input"
-        type="text"
-        placeholder="Enter your command here..."
-      />
-      <div>
-        <a onClick="mute();" id="mute-txt">Unmute</a>
-        <a onClick="muteDeath();" id="death-mute-txt">Unmute</a>
-        <a onClick="playMusic();" id="play-txt" class="play">Play sound</a>
+    <div class="wrapper">
+      <div class="container">
+        <a class="title" onClick="backHome();">ScriptDungeon</a>
+        <div class="content">
+          <p id="text"></p>
+        </div>
+        <input
+          id="usr-input"
+          type="text"
+          placeholder="Enter your command here..."
+        />
+        <div>
+          <a onClick="mute();" id="mute-txt">Unmute</a>
+          <a onClick="muteDeath();" id="death-mute-txt">Unmute</a>
+          <a onClick="playMusic();" id="play-txt" class="play">Play sound</a>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="./static/js/functions.js"></script>

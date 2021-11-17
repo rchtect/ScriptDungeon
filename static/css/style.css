@@ -26,9 +26,6 @@
   }
 }
 
-:root {
-  --ani-time: 0.6s;
-}
 ::selection {
   background-color: black;
 }
@@ -68,7 +65,6 @@ a {
   font-size: 28px;
   color: yellow;
   text-decoration: none;
-  margin: 20px;
 }
 
 a:hover {
@@ -80,12 +76,18 @@ b {
   color: yellow;
 }
 
+.wrapper {
+  justify-content: center;
+  height: 97vh;
+  align-items: center;
+}
 .container {
+  margin-top: -100px;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   text-align: center;
 }
 
@@ -93,6 +95,7 @@ b {
   color: yellow;
   font-size: 32px;
   transition: var(--ani-time);
+  margin-top: none;
 }
 
 .title:hover {
@@ -109,10 +112,9 @@ b {
   max-width: 600px;
   width: 100%;
   min-width: 300px;
-  height: auto;
-  padding: 40px 0px 40px 0px;
+  padding: 20px 0px 40px 0px;
   border: solid 1px yellow;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #text {
@@ -160,3 +162,24 @@ b {
 .play {
   color: green;
 }
+
+@media screen and (max-height: 600px) {
+  input {
+    margin-top: 20px;
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  input {
+    margin-top: 20px;
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+}
+
