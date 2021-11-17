@@ -22,12 +22,14 @@ function isInvalid() {
 
 function isAlive() {
   if (alive == true) {
+    document.getElementById("audio").play();
     document.getElementById("death-mute-txt").style.display = "none";
     document.getElementById("mute-txt").style.display = "block";
     document.getElementById("audio").muted = false;
     document.getElementById("death-audio").muted = true;
     document.getElementById("text").innerHTML += livingState.alive.desc;
   } else {
+    document.getElementById("death-audio").play();
     document.getElementById("death-mute-txt").style.display = "block";
     document.getElementById("mute-txt").style.display = "none";
     document.getElementById("audio").muted = true;
