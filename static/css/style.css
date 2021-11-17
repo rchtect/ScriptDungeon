@@ -2,6 +2,14 @@
   font-family: "Determination Mono";
   src: url("../misc/Determination.ttf") format("truetype");
 }
+
+@keyframes deathAni {
+  0%   {color:black; opacity: 100%;}
+  25%  {color:red; opacity: 50%;}
+  50%  {color:black; opacity: 100%;}
+  75%  {color:red; opacity: 50%;}
+  100% {color:black; opacity: 100%;}
+}
 :root {
   --ani-time: 0.6s;
 }
@@ -24,7 +32,6 @@ body {
 p {
   color: white;
   max-width: 400px;
-  transition: var(--ani-time);
 }
 
 input {
@@ -107,6 +114,18 @@ b {
   color: white;
   transition: var(--ani-time);
 }
+
+.reddead {
+  color: red;
+  animation-name: deathAni;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.alive {
+  color: red;
+}
+
 
 #bottom {
   margin-top: 40px;
