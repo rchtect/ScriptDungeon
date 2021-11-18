@@ -69,7 +69,7 @@ input {
   color: white;
   background-color: black;
   border: none;
-  margin-top: 150px;
+  margin-top: 80px;
   margin-bottom: 40px;
   outline: solid 1px yellow;
   max-width: 600px;
@@ -97,8 +97,6 @@ b {
   align-items: center;
 }
 .container {
-  margin-top: -100px;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -50,6 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
             isInvalid();
           }
           break;
+        /**
+         * Here's a break between the North story and South story
+         */
         case "south":
           if (currentLocation == 0) {
             clearText();
@@ -61,8 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
             isInvalid();
           }
           break;
+        case "help":
         case "help them":
           if (currentLocation == 2) {
+            input = "help them";
+            optionLocation = "help them";
             clearText();
             isAliveMusic();
             updateLocation();
@@ -72,9 +78,64 @@ document.addEventListener("DOMContentLoaded", function () {
             isInvalid();
           }
           break;
+        case "leave":
+          if (currentLocation == 4) {
+            input = "leave with friends";
+            optionLocation = "leave with friends";
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          }
         case "leave them":
           if (currentLocation == 2) {
+            input = "leave them";
+            optionLocation = "leave them";
             death();
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else if (currentLocation >= 2) {
+            return;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "fight":
+        case "fight him":
+          if (currentLocation == 4) {
+            input = "fight him";
+            optionLocation = "fight him";
+            death();
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "leave with friends":
+          if (currentLocation == 4) {
+            input = "leave with friends";
+            optionLocation = "leave with friends";
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "11":
+          if (currentLocation == 6) {
+            input = "win";
+            optionLocation = "win";
             clearText();
             isAliveMusic();
             updateLocation();
