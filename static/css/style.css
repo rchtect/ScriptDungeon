@@ -69,7 +69,8 @@ input {
   color: white;
   background-color: black;
   border: none;
-  margin-top: 80px;
+  margin-top: 150px;
+  margin-bottom: 40px;
   outline: solid 1px yellow;
   max-width: 600px;
   width: 100%;
@@ -179,6 +180,7 @@ b {
 @media screen and (max-height: 600px) {
   input {
     margin-top: 20px;
+    margin-bottom: 0;
   }
 
   .container {
@@ -189,6 +191,7 @@ b {
 @media screen and (max-width: 720px) {
   input {
     margin-top: 20px;
+    margin-bottom: 0;
   }
 
   .container {
