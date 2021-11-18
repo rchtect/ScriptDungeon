@@ -27,17 +27,25 @@
 }
 
 @keyframes rainbow {
-  0% {
-    color: red;
+  from {
+    color: #6666ff;
+    opacity: 100%;
   }
-  33% {
-    color: green;
+  10% {
+    color: #0099ff;
+    opacity: 50%;
   }
-  66% {
-    color: blue;
+  50% {
+    color: #00ff00;
+    opacity: 100%;
+  }
+  75% {
+    color: #ff3399;
+    opacity: 50%;
   }
   100% {
-    color: red;
+    color: #6666ff;
+    opacity: 50%;
   }
 }
 
@@ -198,13 +206,13 @@ b {
 }
 
 .egg {
-  position: fixed;
+  position: relative;
   font-size: 12px;
   height: 14px;
-  margin: auto;
+  margin-top: 20px;
   bottom: 0;
   animation-name: rainbow;
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   margin-bottom: 20px;
 }

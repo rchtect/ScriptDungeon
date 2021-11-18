@@ -50,6 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
             isInvalid();
           }
           break;
+          case "kill the eagle":
+          case "kill":
+            if (currentLocation == 3) {
+              input = "kill the eagle";
+              optionLocation = "kill the eagle";
+              death();
+              clearText();
+              isAliveMusic();
+              updateLocation();
+              changeOptions();
+              currentLocation += 2;
+            } else {
+              isInvalid();
+            }
+            break;
         /**
          * Here's a break between the North story and South story
          */
@@ -136,6 +151,21 @@ document.addEventListener("DOMContentLoaded", function () {
           if (currentLocation == 6) {
             input = "win";
             optionLocation = "win";
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "8":
+        case "3":
+          if (currentLocation == 6) {
+            death();
+            input = "lose";
+            optionLocation = "lose";
             clearText();
             isAliveMusic();
             updateLocation();
