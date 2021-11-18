@@ -6,7 +6,7 @@ var muted = true;
 document.addEventListener("DOMContentLoaded", function () {
   alive = true;
   clearText();
-  isAlive();
+  isAliveMusic();
   document.getElementById("text").innerHTML += locations.start.desc;
   changeOptions();
   document.addEventListener("keydown", enter, false);
@@ -19,21 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         case "north":
           if (currentLocation == 0) {
             clearText();
-            isAlive();
+            isAliveMusic();
             updateLocation();
             changeOptions();
             currentLocation += 1;
-          } else {
-            isInvalid();
-          }
-          break;
-        case "south":
-          if (currentLocation == 0) {
-            clearText();
-            isAlive();
-            updateLocation();
-            changeOptions();
-            currentLocation += 2;
           } else {
             isInvalid();
           }
@@ -42,7 +31,52 @@ document.addEventListener("DOMContentLoaded", function () {
           if (currentLocation == 1) {
             death();
             clearText();
-            isAlive();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "let be":
+          if (currentLocation == 1) {
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "south":
+          if (currentLocation == 0) {
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "help them":
+          if (currentLocation == 2) {
+            clearText();
+            isAliveMusic();
+            updateLocation();
+            changeOptions();
+            currentLocation += 2;
+          } else {
+            isInvalid();
+          }
+          break;
+        case "leave them":
+          if (currentLocation == 2) {
+            death();
+            clearText();
+            isAliveMusic();
             updateLocation();
             changeOptions();
             currentLocation += 2;

@@ -8,7 +8,7 @@ function clearInput() {
 function backHome() {
   clearText();
   alive = new Boolean(true);
-  isAlive();
+  isAliveMusic();
   document.getElementById("text").innerHTML += locations.start.desc;
   currentLocation = 0;
   optionLocation = "start";
@@ -20,7 +20,7 @@ function isInvalid() {
   alert("The input is invalid");
 }
 
-function isAlive() {
+function isAliveMusic() {
   if (alive == true) {
     document.getElementById("death-mute-txt").style.display = "none";
     document.getElementById("mute-txt").style.display = "block";
@@ -65,6 +65,7 @@ function changeOptions() {
 
 function updateLocation() {
   document.getElementById("text").innerHTML += locations[input].desc;
+  document.getElementById("usr-input").value = "";
 }
 
 var i = 0;

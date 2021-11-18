@@ -26,6 +26,21 @@
   }
 }
 
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  33% {
+    color: green;
+  }
+  66% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
+
 ::selection {
   background-color: black;
 }
@@ -46,7 +61,7 @@ body {
 
 p {
   color: white;
-  max-width: 400px;
+  max-width: 560px;
 }
 
 input {
@@ -179,5 +194,17 @@ b {
   .container {
     margin-top: 20px;
   }
+}
+
+.egg {
+  position: fixed;
+  font-size: 12px;
+  height: 14px;
+  margin: auto;
+  bottom: 0;
+  animation-name: rainbow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  margin-bottom: 20px;
 }
 
