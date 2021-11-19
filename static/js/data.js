@@ -65,7 +65,7 @@ var locations = {
     options: "<br><br> <b>(Heaven) (Hell)</b>",
   },
   hell: {
-    desc: "You followed the path which led to the beautiful Norwegian town called Hell.. <i>I'm so lucky I didn't go to the 'heaven' prison</i>, you think to yourself as you enjoy a mocha coffee.<p class='egg'>More coming soon (hopefully)</p>",
+    desc: "You followed the path which led to the beautiful Norwegian town called Hell.. <i>I'm so lucky I didn't go to the 'heaven' prison</i>, you think to yourself as you enjoy a boba tea.<p class='egg'>More coming soon (hopefully)</p>",
     options:
       "<br><br> <b>(You completed the game! Press ESC or write 'return' to go back and try it again)</b>",
   },
