@@ -1,10 +1,15 @@
+/** Global variable for iterating between muted states. */
+var i = 0;
+/** Refreshes the displayed text. */
 function clearText() {
   var text = document.getElementById("text");
   while (text.firstChild) text.removeChild(text.firstChild);
 }
+/** Refreshes the text written in the inputfield. */
 function clearInput() {
   document.getElementById("usr-input").value = "";
 }
+/** Used by both ESC button, reset command and title link, resets everything and turns user to start. */
 function backHome() {
   clearText();
   alive = new Boolean(true);
@@ -15,11 +20,13 @@ function backHome() {
   changeOptions();
   clearInput();
 }
-
+/** Alerts if input is invalid */
 function isInvalid() {
   alert("The input is invalid");
 }
-
+/** A function for handling living states texts and corresponding music being played.
+ * Also plays music if muted is false and toggles corresponding buttons for playing and pausing death.mp3 and main.mp3. 
+ */
 function isAliveMusic() {
   if (alive == true) {
     document.getElementById("death-mute-txt").style.display = "none";
@@ -38,8 +45,13 @@ function isAliveMusic() {
       document.getElementById("death-audio").play();
     }
   }
+  if (completed == true) {
+    document.getElementById("text").innerHTML = "";
+    document.getElementById("text").innerHTML += livingState.finished.desc;
+  }
 }
-
+/** Function used by play music button uses i variable to iterate between muted and false. 
+ * Button can only play and not mute. */
 function playMusic() {
   if (alive == true) {
     muted = false;
@@ -53,22 +65,22 @@ function playMusic() {
     document.getElementById("death-mute-txt").innerHTML = "Mute";
   }
 }
-
+/** Rather useless function but good when switch-case function gets longer. 
+ * Makes the global variablea live to false which plays death music and shows death info. */
 function death() {
   alive = false;
 }
-
+/** Updates options text under desc text depending on the value of global varaible optionLocation. */
 function changeOptions() {
   document.getElementById("text").innerHTML +=
     locations[optionLocation].options;
 }
-
+/** Updates display text under desc depending on the value of global varaible input. Clears inputfield. */
 function updateLocation() {
   document.getElementById("text").innerHTML += locations[input].desc;
   document.getElementById("usr-input").value = "";
 }
-
-var i = 0;
+/** Function for muting for main.mp3. Uses global variable i for iteration between mute and unmute. */
 function mute() {
   if (i === 0) {
     document.getElementById("audio").play();
@@ -84,6 +96,7 @@ function mute() {
     i = 0;
   }
 }
+/** Function for muting for death.mp3. Uses global variable i for iteration between mute and unmute. */
 function muteDeath() {
   if (i === 0) {
     document.getElementById("death-audio").play();

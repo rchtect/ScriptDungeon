@@ -1,3 +1,6 @@
+/**
+ * @typedef {{ (any option in the list): Object, desc: String, options: String }} Stores the text for all locations and options.
+ */
 var locations = {
   start: {
     desc: "You see the tall mountains penetrating the sky on the north side of the map and you see the icy lake on the south side. Where do you wish to go?",
@@ -22,6 +25,10 @@ var locations = {
   befriend: {
     desc: "You try to befriend it, but it's <i>eagle cool</i> we are talking about. With nothing to offer him you became the offer: tasty human snack",
     options: "<br><br> <b>(Type 'reset' or press ESC to try again)</b>",
+  },
+  run: {
+    desc: "You manage to run away without the eagle following your footsteps. The road splits in two and there's a sign that reads 'to Heaven' and 'to Hell'. Where do you go?",
+    options: "<br><br> <b>(Heaven) (Hell)</b>",
   },
   /**
    * Here's a break between the North story and South story
@@ -54,20 +61,31 @@ var locations = {
     options: "<br><br><b>(Type 'reset' or press ESC to try again)</b>",
   },
   win: {
-    desc: "You just won 10000000000 million cans of tuna for your penguin friends. Turns out these penguins were a part of the local bird mafia and you now have a fortune of <i>more useful</i> human money.. You step outside the casino and continue on your journey on the road but the path splits. You read the road sign and it says 'to hell' and 'to heaven'. Where do we go from here?",
+    desc: "You just won 10000000000 million cans of tuna for your penguin friends. Turns out these penguins were a part of the local bird mafia and you now have a fortune of <i>more useful</i> human money.. You step outside the casino and continue on your journey on the road but the path splits. You read the road sign and it says 'to Hell' and 'to Heaven'. Where do we go from here?",
     options: "<br><br> <b>(Heaven) (Hell)</b>",
   },
   hell: {
-    desc: "You followed the path which led to the beautiful Norwegian town called Hell.. <i>I'm so lucky I didn't go to the 'heaven' prison</i>, you think.",
-    options: "Coming soon! (... I think... I hope...)",
+    desc: "You followed the path which led to the beautiful Norwegian town called Hell.. <i>I'm so lucky I didn't go to the 'heaven' prison</i>, you think to yourself as you enjoy a mocha coffee.<p class='egg'>More coming soon (hopefully)</p>",
+    options:
+      "<br><br> <b>(You completed the game! Press ESC or write 'return' to go back and try it again)</b>",
+  },
+  heaven: {
+    desc: "You followed the path which led to the prison called Heaven. While you were on your way to heaven you were arrested for money laundering because you exchanged large amounts of tunas for money. After a day in prison you dropped the soap and died from an- erm- infection..",
+    options: "<br><br><b>(Type 'reset' or press ESC to try again)</b>",
   },
 };
 
+/**
+ * @typedef {{ (any state): Object, desc: String}} Stores corresponding states which the user is in
+ */
 var livingState = {
   alive: {
     desc: "<b class='red'>♥ You are alive ♥</b> <br><br>",
   },
   dead: {
     desc: "<b class='red'>♥ You died :( ♥</b> <br><br>",
+  },
+  finished: {
+    desc: "<b class='red'>♥ Congratulations! ♥</b> <br><br>",
   },
 };
